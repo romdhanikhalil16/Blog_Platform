@@ -1,0 +1,9 @@
+<div *ngFor="let user of users">
+    {{ user.username }} - {{ user.role }}
+    <select (change)="updateRole(user._id, $event.target.value)">
+        <option value="Admin">Admin</option>
+        <option value="Editor">Editor</option>
+        <option value="Writer">Writer</option>
+        <option value="Reader">Reader</option>
+    </select>
+</div>

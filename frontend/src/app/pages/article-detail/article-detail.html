@@ -1,0 +1,12 @@
+<h2>{{ article?.title }}</h2>
+<p>{{ article?.content }}</p>
+
+<hr>
+<h3>Comments</h3>
+
+<div *ngFor="let c of comments">
+    <b>{{ c.author.username }}:</b> {{ c.content }}
+</div>
+
+<input [(ngModel)]="newComment" placeholder="Write a comment..." />
+<button (click)="sendComment()">Send</button>
